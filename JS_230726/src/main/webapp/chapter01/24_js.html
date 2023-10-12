@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch</title>
+</head>
+<body>
+
+	<script>
+		var solution=10;
+		var input=prompt('수를 맞춰보세요');
+		
+		console.log(input);
+		
+		if(input > solution+2){
+			alert('Down')
+		}else if(input<solution-2){
+			alert('UP');
+		}else{
+			if(input==solution){
+				alert('정답');
+			}else{
+				alert('근사치');
+			}
+		}
+		
+		var gender=prompt('성별을 입력하세요');
+		
+		switch(gender){
+		case '여자' :
+			alert('female');
+			break;
+		case '남자' :
+			alert('male');
+			break;
+		case '기타' :
+			alert('other');
+			break;
+		default : 
+			alert('다시입력하세요');
+		}
+	</script>
+</body>
+</html>
