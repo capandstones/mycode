@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>function</title>
+</head>
+
+<body>
+	<script>
+		
+	
+		function add(x,y,z) {
+			var sum;
+			if((y===undefined) && (z===undefined)){
+				sum=x;
+			}
+			else if(z===undefined){
+				sum=x+y;
+			}
+			else{
+				sum=x+y+z;
+			}
+			
+			
+			
+			return sum;
+		}
+		
+		var r1=add(1);
+		var r2=add(2,3);
+		var r3=add(4,5,6);
+		
+		document.write("함수 호출 인자 1개 : "+r1+"</p>");
+		document.write("함수 호출 인자 2개 : "+r2+"</p>");
+		document.write("함수 호출 인자 3개 : "+r3+"</p>");
+	
+
+	</script>
+
+
+</body>
+
+</html>
+
+
+<!--무명함수는 함수처럼 돌아는 가지만 변수취급=> 순서무시 못함!-->
