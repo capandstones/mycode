@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+
+<body>
+	<p>[Hong's Car]</p>
+	<p id="hong1"></p>
+	<p id="hong2"></p>
+	<p id="hong3"></p>
+	<p>[Kim's Car]</p>
+	<p id="data1"></p>
+	<p id="data2"></p>
+	<p id="data3"></p>
+	<p id="data4"></p>
+
+	<script>
+		function Car(name, color, speed) {
+			this.name = name;
+			this.color = color;
+			this.speed = speed;
+
+			this.speedup = function () {
+				return this.speed + 10;
+			};
+
+			this.speeddown = function () {
+				return this.speed - 10;
+			};
+		}
+
+		var Hongcar = new Car('Sonata', 'blue', 100);
+		var Kimcar = new Car('Jeep', 'red', 120);
+		
+		
+		//속성 추가 삭제
+		Kimcar.price='4천만원';
+		delete Kimcar.color;
+
+		var cname = document.getElementById("hong1");
+		cname.textContent = "자동차 이름 : " + Hongcar.name;
+		var ccolor = document.getElementById("hong2");
+		ccolor.textContent = "자동차 색상 : " + Hongcar.color;
+		var cspeed = document.getElementById("hong3");
+		cspeed.textContent = "자동차 속도 : " + Hongcar.speedup();
+
+		var cname = document.getElementById("data1");
+		cname.textContent = "자동차 이름 : " + Kimcar.name;
+		var ccolor = document.getElementById("data2");
+		ccolor.textContent = "자동차 색상 : " + Kimcar.color;
+		var cspeed = document.getElementById("data3");
+		cspeed.textContent = "자동차 속도 : " + Kimcar.speedup();
+		var cprice = document.getElementById("data4");
+		cprice.textContent = "자동차 가격 : " + Kimcar.price;
+
+	</script>
+</body>
+
+</html>

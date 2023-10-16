@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/*#1*/
+*{
+	padding : 0;
+	margin : 0;
+}
+
+ul,li{
+	list-style: none;
+}
+
+button.transparent-button{
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor:pointer;
+}
+
+/*header 기본설정 후 구현*/
+.container{
+	width: 100%;
+	background-color: #f0f0f0;
+	padding : 20px 0;
+}
+
+article.card{
+	width: 600px;
+	margin:20px auto;
+	margin-bottom: 60px;
+	background: #fff;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+}
+
+/*** HEADER 시작 ***/
+article.card header{
+	height: 40px;
+	padding: 10px;
+}
+
+article.card header >div{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.circle-image{
+	height: 100%;/*article.card header기준 : height: 40px;*/
+	padding: 5px;
+	box-sizing: border-box;/*padding: 을 주어도 주어진 크기에서 벗어나지 않게 자동 맞춤*/
+}
+
+.circle-image >img{
+	height: 100%;
+	border-radius: 50%;
+}
+
+.card-username{
+	padding: 10px 0;
+	font-weight: 900;
+	line-height: 29px;
+	margin-left: 5px;
+	font-size: 13px;
+}
+
+.option-more{
+	float: right;
+	padding: 7px;
+}
+
+/*** HEADER 종료 ***/
